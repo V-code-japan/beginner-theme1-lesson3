@@ -23,7 +23,7 @@
 <p>・アイテムをわたしたいときは、``||blocks.ブロック||``にある``||blocks.アイテム||``をとりだして、**アイテム/ブロック**の部分にはめこむ</p>
 <p>・数を、ほしい数にする</p>
 <n></n>
-<p>ヒント（💡マークをおすとひらく）には例として、**チャットで「run」と入力したらダイヤモンドのツルハシとレンガブロックをとりだすプログラム**をつくっています。</p>
+<p>ヒント（💡マークをおすとひらく）には例として、**チャットで「run」と入力したらダイヤモンドのツルハシとレンガブロックをとりだすプログラム**と、**プログラムを実行したときにプレイヤーに棒をわたして、棒を使った時にダイヤモンドのツルハシとレンガブロックをわたすプログラム**をつくっています。</p>
 <p>これを参考に、好きなブロックやアイテムを取り出してみよう！</p>
 ```blocks
 player.onChat("run", function () {
@@ -38,6 +38,23 @@ player.onChat("run", function () {
     64
     )
 })
+player.onItemInteracted(STICK, function () {
+    mobs.give(
+    mobs.target(LOCAL_PLAYER),
+    DIAMOND_PICKAXE,
+    1
+    )
+    mobs.give(
+    mobs.target(LOCAL_PLAYER),
+    BRICKS,
+    64
+    )
+})
+mobs.give(
+mobs.target(LOCAL_PLAYER),
+STICK,
+1
+)
 ```
 
 ## ゲームモードについて
