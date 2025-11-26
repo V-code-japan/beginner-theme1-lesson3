@@ -1,5 +1,5 @@
 # 作った家をかざりつけよう！
-```blocks
+```templates
 player.onChat("run", function () {
     blocks.fill(
     PLANKS_BIRCH,
@@ -80,3 +80,4 @@ STICK,
 <p>とりだしたブロックやアイテムを、好きな場所にかざりつけましょう。</p>
 
 <img style="display: block; margin: auto;" height="50%" width="90%" src="https://vcode-esia.com/images_for_world_data/Basic/Theme1/Lesson3/may_fly.gif">
+
