@@ -1,5 +1,5 @@
 # 作った家をかざりつけよう！
-```templates
+```template
 player.onChat("run", function () {
     blocks.fill(
     PLANKS_BIRCH,
